@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "retroking";
+  src: url("../Font/Retroking.ttf");
+}
+
+.Banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Banner .banner {
+  min-width: 100%;
+  max-height: 100vh;
+  position: relative;
+}
+
+.Banner .titre {
+  position: absolute;
+}
+
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar-light .navbar-brand {
+  color: #fff;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: #f1e3cb;
+}
+
+.container-fluid img {
+  width: 120px;
+  margin-right: 1em;
+}
+
+.bigContainer h2 {
+  font-family: retroking;
+  color: #581c0c;
+}
+/*# sourceMappingURL=style.css.map */
