@@ -1,0 +1,37 @@
+
+.about {
+    .aboutGroup{ 
+        width: 600px;
+        
+        .line{
+            width:550px ;
+        }      
+        .ab {
+        width: 450px;
+        height: 500px;
+        margin-top: -130px;
+        margin-left: 2em;
+        }
+        .reverse {
+            margin-top: -130px;
+            transform: rotate(180deg);
+           
+        }
+        
+    }   
+}
+
+.text {
+    width: 80%;
+    font-family: 'Bodoni Moda', serif;
+    text-align: justify;
+    font-size: 20px;
+    p {
+        padding-top: 2em;
+    }
+    p::first-letter {
+        color: #ca5116;
+        font-size: 300%;
+        font-family: 'Lucida Calligraphy';
+      }
+    }
