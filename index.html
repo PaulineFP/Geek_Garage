@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -8,14 +9,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="main.js"></script>
+    
 </head>
 
 <body>
     <div>
-        <div class="Banner">
-
-            <img src="Img/Banner.png" class="banner img-fluid">
-
+        <div class="Banner container-fluid">
+            <div class="d-flex justify-content-center">
+                <img src="Img/titre.png" class="titre d-flex img-fluid">
+            </div>
             <nav class="navbar fixed-top navbar-light ">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#about">Qui sommes nous</a>
@@ -25,21 +31,21 @@
                     <a class="navbar-brand" href="#contact">Contact</a>
                 </div>
             </nav>
-
-            <img src="Img/titre.png" class="titre d-flex">
+            
+           
 
         </div>
 
         <div class="container-fluid bigContainer">
 
-            <div class="about">
+            <div class="about container-sm">
 
                 <div class="d-flex justify-content-center">
-                    <img src="Img/farme.jpg" class="farme">
+
                     <h2 id="about">Qui sommes nous</h2>
                 </div>
 
-                <div class="d-flex">
+                <div class="d-flex container-sm">
                     <div class="aboutGroup col-2">
                         <img src="Img/border.png" class="line">
                         <img src="Img/about.jpg" class="ab p-5">
@@ -47,7 +53,7 @@
                     </div>
 
                     <div class="text ">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                        <p class="lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Suspendisse quis convallis ligula, non varius
                             orci.Nullam libero neque, accumsan tincidunt mollis
                             tempus, ultricies at dui. Mauris non dictum eros. Duis
@@ -72,10 +78,10 @@
                 </div>
             </div>
 
-            <div class="services">
+            <div class="services container-sm">
 
                 <div class="d-flex justify-content-center">
-                    <img src="Img/farme.jpg" class="farme">
+                
                     <h2 id="services">Prestations</h2>
                 </div>
 
@@ -102,31 +108,78 @@
 
             </div>
 
-            <div class="map ">
-                <div class="d-flex justify-content-center">
-                    <img src="Img/farme.jpg" class="farme">
+            <div class="container-sm">
+                <div class="d-flex justify-content-center ">
+                  
                     <h2 id="where">Où nous trouver</h2>
                 </div>
 
-                <div class="map d-flex justify-content-center">
-                    <img src="Img/border.png"  >
+                <div class="map d-flex flex-column align-items-center ">
+                    <img src="Img/border.png">
+
+                    <div id="mapid">
+
+                    </div>
+
                     <img src="Img/border.png" class="map-reverse">
                 </div>
             </div>
 
-            <div class="contact ">
-                <div class="d-flex justify-content-center">
-                    <img src="Img/farme.jpg" class="farme">
+            <div class="contact container-sm">
+                <div class="d-flex  justify-content-center">
+                   
                     <h2 id="contact">Contact</h2>
                 </div>
 
-                <div>
-
+                <div class="formContact d-flex justify-content-center">
+                    
+                  
+                        <div class="form mb-3">
+                            <form name="Contact" action="contact.php" method="POST" onsubmit="return validateForm()">
+                               
+                                <td>
+                                    <input type="text" name="name" class="form-control" id="validationServer01" placeholder="Nom/Prénom:"><br>
+                                    <span class="error" id="errorname"></span>
+                                </td>
+                                <td>
+                                    <input type="email" name="email" class="form-control" placeholder="E-mail:"><br>
+                                    <span class="error" id="erroremail"></span>
+                                </td>
+                                <td>
+                            
+                                    <textarea type="text" resize name="message" class="form-control" 
+                                    id="exampleFormControlTextarea1" rows="3" placeholder="Message:"></textarea>
+                                    
+                                    <span class="error" id="errormsg"></span>
+                                </td>
+                                <button type="submit" value="Envoyer" class="btn send">Envoyer </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-
             </div>
+            
         </div>
-    </div>
-</body>
+        <footer class="footer">
+            <p>&copy 2021 - Onlineformapro</p>
+        </footer>
+        <!---Fichier JS-->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin="">
+        </script>
+        <script>
+            //On initialise la carte
+            var mymap = L.map('mapid').setView([47.6280678, 6.1628472,14], 13);
+
+            //On charge les tuiles
+            L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                    // Il est toujours bien de laisser le lien vers la source des données
+                    attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                    minZoom: 1,
+                    maxZoom: 20
+                }).addTo(mymap);
+        </script>
+    </body>
 
 </html>

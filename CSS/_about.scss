@@ -1,9 +1,9 @@
 
 .about {
-    .aboutGroup{ 
+    .aboutGroup { 
         width: 600px;
         
-        .line{
+        .line {
             width:550px ;
         }      
         .ab {
@@ -15,7 +15,6 @@
         .reverse {
             margin-top: -130px;
             transform: rotate(180deg);
-           
         }
         
     }   
@@ -29,9 +28,10 @@
     p {
         padding-top: 2em;
     }
+
     p::first-letter {
         color: #ca5116;
         font-size: 300%;
         font-family: 'Lucida Calligraphy';
-      }
     }
+}
