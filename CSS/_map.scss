@@ -1,13 +1,17 @@
 .map {
-    img{
+    img {
     width:1000px ;
     }
-    .map-reverse{   
+    .map-reverse {   
         transform: rotate(180deg);
     }
+    .btn_map {
+    color: white;
+}
 }
 
-#mapid{
+
+#mapid { 
     width: 600px;
     height: 600px;
 }
