@@ -4,6 +4,7 @@
     }
     .map-reverse {   
         transform: rotate(180deg);
+        margin-top: -12em;
     }
     .btn_map {
     color: white;
@@ -14,4 +15,6 @@
 #mapid { 
     width: 600px;
     height: 600px;
+    margin-top: -15em;
+    margin-right: 2em;
 }

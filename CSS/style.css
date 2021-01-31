@@ -82,7 +82,7 @@
   width: 450px;
   height: 500px;
   margin-top: -130px;
-  margin-left: 2em;
+  margin-left: 3em;
 }
 
 .about .aboutGroup .reverse {
@@ -138,6 +138,7 @@
 .map .map-reverse {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  margin-top: -12em;
 }
 
 .map .btn_map {
@@ -147,6 +148,12 @@
 #mapid {
   width: 600px;
   height: 600px;
+  margin-top: -15em;
+  margin-right: 2em;
+}
+
+.alert {
+  text-align: center;
 }
 
 .formContact {
@@ -159,8 +166,17 @@
   padding-top: 8em;
 }
 
-.formContact .form input {
+.formContact .form label {
+  color: #581c0c;
+  background-color: #f6caac;
   border: none;
+}
+
+.formContact .form .input-group {
+  margin-bottom: 1em;
+}
+
+.formContact .form .input-group input {
   color: #581c0c;
 }
 
@@ -184,16 +200,15 @@
 }
 
 .footer {
-  height: 70px;
-  padding-top: 1rem;
   text-align: center;
   font-family: calibris;
   background-color: #581c0c;
 }
 
 .footer p {
+  padding: 2em;
   color: #f9b384;
-  padding-top: 1em;
+  margin: 0;
 }
 
 @media screen and (max-width: 780px) {
@@ -230,6 +245,11 @@
   .bigContainer .map img {
     display: none;
   }
+  .bigContainer #mapid {
+    margin-top: 0;
+    width: 400px;
+    height: 300px;
+  }
   .bigContainer .formContact {
     background: no-repeat center/100% url("../Img/contactmedia.png");
     height: 700px;
@@ -237,9 +257,13 @@
   }
   .bigContainer .formContact .form {
     padding-top: 4rem;
+    width: 300px;
+  }
+  .bigContainer .formContact .form label {
+    width: 90px;
+    font-size: 10px;
   }
   .bigContainer .formContact .form input {
-    width: 300px;
     border: none;
     background-color: rgba(255, 240, 211, 0.582);
   }
@@ -261,8 +285,8 @@
     width: 100%;
   }
   .bigContainer h2 {
-    font-size: 20px;
-    padding-top: 25px;
+    font-size: 19px;
+    padding-top: 29px;
     height: 100px;
     margin-top: 1em;
   }
@@ -284,13 +308,25 @@
   .bigContainer .services .feather img {
     display: none;
   }
+  .bigContainer #mapid {
+    margin-top: 0;
+    width: 200px;
+    height: 300px;
+  }
   .bigContainer .formContact {
     background: no-repeat center/120% url("../Img/contactmedia.png");
     height: 600px;
   }
+  .bigContainer .formContact .form {
+    width: 200px;
+  }
+  .bigContainer .formContact .form .input-group-text {
+    width: 90px;
+    font-size: 10px;
+  }
   .bigContainer .formContact .form input {
     font-size: 12px;
-    width: 200px;
+    width: 100px;
   }
   .bigContainer .formContact .form textarea {
     width: 200px;

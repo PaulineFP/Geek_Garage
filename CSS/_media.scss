@@ -8,7 +8,7 @@
             padding-top: 4em;
         }
 
-        //-----------------
+        //---------------------
         .about {
             .aboutGroup {
                 display: none;
@@ -49,6 +49,11 @@
         .map img {
             display: none;
         }
+        #mapid {
+            margin-top: 0;
+            width: 400px;
+            height: 300px;
+        }
 
         //-----------------------
 
@@ -59,9 +64,12 @@
 
             .form {
                 padding-top: 4rem;
-
+                width: 300px;
+                label {
+                    width: 90px;
+                    font-size: 10px;
+                }
                 input {
-                    width: 300px;
                     border: none;
                     background-color: rgba(255, 240, 211, 0.582);
                 }
@@ -90,8 +98,8 @@
         width: 100%;
 
         h2 {
-            font-size: 20px;
-            padding-top: 25px;
+            font-size: 19px;
+            padding-top: 29px;
             height: 100px;
             margin-top: 1em;
         }
@@ -129,14 +137,25 @@
 
         }
 
+        #mapid {
+            margin-top: 0;
+            width: 200px;
+            height: 300px;
+        }
+
         .formContact {
             background: no-repeat center/120% url("../Img/contactmedia.png");
             height: 600px;
 
             .form {
+                width: 200px;
+                .input-group-text{
+                    width: 90px;
+                    font-size: 10px;
+                }
                 input {
                     font-size: 12px;
-                    width: 200px;
+                    width: 100px;
                 }
 
                 textarea {

@@ -1,3 +1,7 @@
+.alert {
+    text-align: center;
+  }
+
 .formContact {
     background: no-repeat center/70% url("../Img/contact.png");
     height: 1000px;
@@ -5,11 +9,18 @@
 
     .form {
         padding-top: 8em;
-
-        input {
-            border: none;
+        label{
             color: #581c0c;
+            background-color: #f6caac;
+            border: none;
+        } 
+        .input-group{
+            margin-bottom: 1em;
+           input {
+            color: #581c0c;  
+            }
         }
+        
 
         textarea {
             width: 400px;

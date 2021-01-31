@@ -1,4 +1,4 @@
-//------------------------------------------------Map------------------------
+//------------------------------------------------Map-----------------------------
 
 //Je crée une variable pour récuperer l'id du form
 var contact = document.getElementById('contact');
@@ -10,19 +10,19 @@ var villes = {
         "lat": 47.4478202,
         "lon": 5.5878117,
         "add": '1 Rue Gambetta, 70100 Gray',
-        "h": 'lundi: 08:30–12:00,13:30–17:00, mardi:08:30–12:00,13:30–17:00 mercredi:08:30–12:00,13:30–17:00, jeudi:08:30–12:00,13:30–17:00 vendredi:08:30–12:00,13:30–17:00 samedi:Fermé, dimanche:Fermé',
+        "h": 'Lundi au Vendredi : 08:30–12:00 et 13:30–17:00, Samedi-Dimanche: Fermé'
     },
     "Vienne": {
         "lat": 45.5137518,
         "lon": 4.8636158,
         "add": 'Immeuble Apollo, 30 Avenue Général Leclerc, 38200 Vienne',
-        "h": 'lundi:08:30–12:00,13:30–17:00, mardi:08:30–12:00,13:30–17:00, mercredi:08:30–12:00,13:30–17:00, jeudi:08:30–12:00,13:30–17:00, vendredi:08:30–12:00,13:30–17:00, samedi:Fermé, dimanche:Fermé',
+        "h": 'Lundi au Vendredi : 08:30–12:00 et 13:30–17:00, Samedi-Dimanche: Fermé'
     },
     "Beynost": {
         "lat": 45.8270293,
         "lon": 4.9900471,
         "add": '110 Rue du Chat Botté, 01700 Beynost',
-        "h": 'lundi:08:30–12:00,13:30–17:00, mardi:08:30–12:00,13:30–17:00, mercredi:08:30–12:00,13:30–17:00, jeudi:08:30–12:00,13:30–17:00, vendredi:08:30–12:00,13:30–17:00, samedi:Fermé, dimanche:Fermé',
+        "h": 'Lundi au Vendredi : 08:30–12:00 et 13:30–17:00, Samedi-Dimanche: Fermé'
     },
 };
 
@@ -58,44 +58,29 @@ for (ville in villes) {
 
 //------------------------------------------------------Formulaire Contact-------------------------------------------------------------------------
 
-function validateForm()                                    
+/*
+function validateForm() 
+var name = document.forms["Contact"]["name"];               
+var email = document.forms["Contact"]["email"]; 
+var message = document.forms["Contact"]["message"];   
 { 
-    var name = document.forms["myForm"]["name"];               
-    var email = document.forms["myForm"]["email"]; 
-    var message = document.forms["myForm"]["message"];   
-   
-    if (name.value == "")                                  
-    { 
-        document.getElementById('errorname').innerHTML="Veuillez entrez un nom valide";  
-        name.focus(); 
-        return false; 
-    }else{
-        document.getElementById('errorname').innerHTML="";  
+    if  {
+         //vérifier si les champs invalide
+         //affiche formulaire incoreect
+    } else {
+        // affiche rien
     }
        
-    if (email.value == "")                                   
-    { 
-        document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
-        email.focus(); 
-        return false; 
-    }else{
-        document.getElementById('erroremail').innerHTML="";  
+    if {    
+    //erreur lors de l'envoie d 'email 
+    // affiche alert danger
+    } else {
+        //affiche aller success
     }
-   
-    if (email.value.indexOf("@", 0) < 0)                 
-    { 
-        document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
-        email.focus(); 
-        return false; 
-    } 
-   
-    if (message.value == "")                           
-    {
-        document.getElementById('errormsg').innerHTML="Veuillez entrez un message valide"; 
-        message.focus(); 
-        return false; 
-    }else{
-        document.getElementById('errormsg').innerHTML="";  
-    }
-    return true; 
 }
+
+/*Si il n'y a un champ de pas remplie lorsque l on clic sur le boutton -> Formulaire incorect
+Si tout est ok -> Message envoyé
+Si erreur lors de l envoie -> alert danger
+
+*/ 

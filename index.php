@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,11 +18,11 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
-    <script src="main.js"></script>
 
 </head>
 
 <body>
+
     <div>
         <div class="Banner container-fluid">
             <div class="d-flex justify-content-center">
@@ -31,9 +37,6 @@
                     <a class="navbar-brand" href="#contact">Contact</a>
                 </div>
             </nav>
-
-
-
         </div>
 
         <div class="container-fluid bigContainer">
@@ -103,7 +106,6 @@
                         <img src="Img/plume-detouree.png">
                     </div>
 
-
                 </div>
 
             </div>
@@ -114,12 +116,10 @@
                     <h2 id="where">Où nous trouver</h2>
                 </div>
 
-                <div class="map d-flex flex-column align-items-center ">
+                <div class="map d-flex flex-column align-items-center container-ms ">
                     <img src="Img/border.png">
 
-                    <div id="mapid">
-
-                    </div>
+                    <div id="mapid"></div>
 
                     <img src="Img/border.png" class="map-reverse">
                 </div>
@@ -127,33 +127,52 @@
 
             <div class="contact container-sm">
                 <div class="d-flex  justify-content-center">
-
                     <h2 id="contact">Contact</h2>
+                    
                 </div>
+
+                <?php if (isset($msgDanger)) echo $msgDanger ; else ""; ?>
+                <?php if (isset($msgSuccess)) echo $msgSuccess; else ""; ?>
+
+                <!--alert success-->
+               <!-- <div class="alert alert-success alert-dismissible fade show " role="alert">
+                    <strong>Message envoyé</strong> 
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>-->
+                <!--alert invalide-->
+                <!--<div class=" alert-form alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Formulaire incorrect</strong> 
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>-->
+                <!--alert  erreur envoie-->
+                <!--<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Une erreur est survenue lors de l'envoie du message</strong> 
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>-->
 
                 <div class="formContact d-flex justify-content-center">
 
-
                     <div class="form mb-3">
+                        
                         <form name="Contact" action="contact.php" method="POST" onsubmit="return validateForm()">
-
-                            <td>
-                                <input type="text" name="name" class="form-control" id="validationServer01"
-                                    placeholder="Nom/Prénom:"><br>
-                                <span class="error" id="errorname"></span>
-                            </td>
-                            <td>
-                                <input type="email" name="email" class="form-control" placeholder="E-mail:"><br>
-                                <span class="error" id="erroremail"></span>
-                            </td>
-                            <td>
-
-                                <textarea type="text" resize name="message" class="form-control"
-                                    id="exampleFormControlTextarea1" rows="3" placeholder="Message:"></textarea>
-
-                                <span class="error" id="errormsg"></span>
-                            </td>
+                           
+                            
+                            <div class="input-group">
+                                <label for="name" class="input-group-text">Nom/Prénom:</label>
+                                <input name="name" type="text" class="form-control" id="validationCustom03" required><br>
+                            </div>
+                           
+                            <div class="input-group">
+                                <label for="email" class="input-group-text">E-mail:</label>
+                                <input name="email" type="email"  class="form-control" id="validationCustomUsername"
+                                       aria-describedby="inputGroupPrepend" required><br>
+                            </div>
+                            <div>
+                                <textarea name="message" type="text" resize  class="form-control" id="validationTextarea" 
+                                  placeholder="Message:" minlength="6"></textarea>
+                           </div>
                             <button type="submit" value="Envoyer" class="btn send">Envoyer </button>
+                             <!--Ajouter les massages d'erreur en cas de besoin en js-->
                         </form>
                     </div>
                 </div>
@@ -161,7 +180,7 @@
         </div>
 
     </div>
-    <footer class="footer">
+    <footer class="footer ">
         <p>&copy 2021 - Onlineformapro</p>
     </footer>
     <!--------------------------------Fichier JS--------------------->
@@ -170,6 +189,9 @@
         crossorigin="">
     </script>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
