@@ -50,7 +50,7 @@ if(session_status() == PHP_SESSION_NONE){
 
             </div>
 </header>
-<body class="text-center">
+<body>
 <div class="container">
 
 <!--message d'erreur-->

@@ -67,7 +67,7 @@ if(!empty($_POST)){
 
 ?>
 <?php require 'inc/header.php'?>
-
+<div class="text-center">
 <main class="form-signin">
 <h1>S'inscrire</h1>
 
@@ -115,5 +115,6 @@ if(!empty($_POST)){
 
 </form>
 </main>
+</div>
 </body>
 </html>

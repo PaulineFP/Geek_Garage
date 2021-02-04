@@ -20,6 +20,7 @@ if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) 
 <?php require 'inc/functions.php';?>
 <?php require 'inc/header.php'?>
 
+<div class="text-center">
 <?php if(!empty($errors)): ?>
     <div class="alert alert-<?= $type; ?>">
         <p>Vous n'avez pas rempli le formulaire correctement</p>
@@ -45,7 +46,7 @@ if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) 
         <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
     </form>
 </main>
-
+</div>
 </div>
 
 </body>
