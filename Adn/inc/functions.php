@@ -1,8 +1,7 @@
 <?php
 
-function debug($variable) {
-    echo '<pre>' . print_r($variable,true) . '</pre>';
-}
+require 'db.php';
+
 
 function str_random($lenght){
     $alphabet = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";

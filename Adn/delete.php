@@ -12,7 +12,7 @@ $id = intval($id);
 $sql = $pdo->prepare("DELETE FROM `centers` WHERE id = $id");
 $sql->execute();
 
-header('Location: account.php');
+header('Location: index.php');
 
 
 ?>

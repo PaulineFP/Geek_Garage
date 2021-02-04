@@ -1,20 +1,30 @@
 .map {
-    img {
-    width:1000px ;
+    .img-map {
+        width: 1000px;
     }
-    .map-reverse {   
+    .map-reverse {
         transform: rotate(180deg);
         margin-top: -12em;
     }
     .btn_map {
     color: white;
 }
+
+
+.mapadmin{
+    margin-left: 50%;
+    img{
+        max-width:600px ;
+    }
+
 }
 
 
-#mapid { 
+
+#mymap {
     width: 600px;
     height: 600px;
     margin-top: -15em;
     margin-right: 2em;
+}
 }

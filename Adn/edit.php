@@ -21,10 +21,10 @@ if(isset($_POST['btn-update'])){
     $longitudes = $_POST['long'];
     $openingt = $_POST['openingTimes'];
 
-    $update = $pdo->prepare("UPDATE centers SET namecenter='$namecenter', address='$address', latitudes='$latitudes', longitudes='$longitudes', openingt='$openingt' WHERE id = '$id'");
+    $update = $pdo->prepare("UPDATE centers SET namecenter='$namecenter', address='$address', lat='$latitudes', lon='$longitudes', openingt='$openingt' WHERE id = '$id'");
     $update->execute();
 
-    header('Location: account.php');
+    header('Location: index.php');
 }
 ?>
 
@@ -41,9 +41,9 @@ if(isset($_POST['btn-update'])){
     </div>
 
     <div class="input-group mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-default">Addresse:</span>
-        <input type="text" class="form-control border" name="address" aria-label="Sizing example input"
-               aria-describedby="inputGroup-sizing-default"  value="<?= $centers['address'] ?>"
+        <span class="input-group-text" id="inputGroup-sizing-default">Adresse:</span>
+        <input type="text" class="form-control border" name="openingTimes" aria-label="Sizing example input"
+               aria-describedby="inputGroup-sizing-default"  value="<?= $centers['address'] ?>">
     </div>
 
     <div class="input-group mb-3">
@@ -56,14 +56,14 @@ if(isset($_POST['btn-update'])){
         <span class="input-group-text" id="inputGroup-sizing-default">Latitude</span>
         <input type="text" class="form-control border" name="lat"
                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-               value="<?= $centers['latitudes'] ?>">
+               value="<?= $centers['lat'] ?>">
     </div>
 
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Longitude</span>
         <input type="text" class="form-control border" name="long"
                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-               value="<?= $centers ['longitudes'] ?>">
+               value="<?= $centers ['lon'] ?>">
     </div>
 
     <div class="text-center pt-3">

@@ -16,7 +16,12 @@ if(session_status() == PHP_SESSION_NONE){
     <link rel="stylesheet" href="../css/signin.css" >
     <link rel="stylesheet" href="../css/Bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin="" />
 </head>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">

@@ -8,37 +8,28 @@
   font-family: "retroking";
   src: url("../Font/Retroking.ttf");
 }
-
 .Banner {
   min-width: 100%;
   height: 100%;
   background: no-repeat center/200% url("../Img/Banner.png");
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .Banner .navbar {
   position: absolute;
   background-color: transparent;
 }
-
 .Banner .titre {
   width: 100%;
 }
 
 .navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .navbar-light .navbar-brand {
   color: #fff;
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
 }
 
 .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
@@ -53,7 +44,6 @@
 .bigContainer {
   width: 80%;
 }
-
 .bigContainer h2 {
   width: 50%;
   height: 300px;
@@ -65,7 +55,6 @@
   padding-top: 2em;
   margin: 1em;
 }
-
 .bigContainer .farme {
   position: relative;
 }
@@ -73,79 +62,71 @@
 .about .aboutGroup {
   width: 600px;
 }
-
 .about .aboutGroup .line {
   width: 550px;
 }
-
 .about .aboutGroup .ab {
   width: 450px;
   height: 500px;
   margin-top: -130px;
   margin-left: 3em;
 }
-
 .about .aboutGroup .reverse {
   margin-top: -130px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .text {
   width: 80%;
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
   text-align: justify;
   font-size: 20px;
 }
-
 .text p {
   padding-top: 2em;
 }
-
 .text p::first-letter {
   color: #ca5116;
   font-size: 300%;
-  font-family: 'Lucida Calligraphy';
+  font-family: "Lucida Calligraphy";
 }
 
 .services {
   padding-top: 2em;
 }
-
 .services .wcontainer {
   margin-left: 2em;
 }
-
 .services .wcontainer .work {
   width: 600px;
 }
-
 .services .lcontainer .list .poster {
   width: 100%;
   margin-top: -35%;
   margin-left: 8em;
 }
-
 .services .feather img {
   width: 330px;
   margin-top: -200%;
 }
 
-.map img {
+.map .img-map {
   width: 1000px;
 }
-
 .map .map-reverse {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
   margin-top: -12em;
 }
-
 .map .btn_map {
   color: white;
 }
-
-#mapid {
+.map .mapadmin {
+  margin-left: 50%;
+}
+.map .mapadmin img {
+  max-width: 600px;
+}
+.map #mymap {
   width: 600px;
   height: 600px;
   margin-top: -15em;
@@ -161,37 +142,30 @@
   height: 1000px;
   padding-left: 10em;
 }
-
 .formContact .form {
   padding-top: 8em;
 }
-
 .formContact .form label {
   color: #581c0c;
   background-color: #f6caac;
   border: none;
 }
-
 .formContact .form .input-group {
   margin-bottom: 1em;
 }
-
 .formContact .form .input-group input {
   color: #581c0c;
 }
-
 .formContact .form textarea {
   width: 400px;
   height: 200px;
   color: #581c0c;
 }
-
 .formContact .form .error {
   color: #D8000C;
   font-size: large;
   font-family: calibri;
 }
-
 .formContact .form .send {
   background-color: #f6caac;
   color: #581c0c;
@@ -204,7 +178,6 @@
   font-family: calibris;
   background-color: #581c0c;
 }
-
 .footer p {
   padding: 2em;
   color: #f9b384;
@@ -276,11 +249,11 @@
     margin-left: 35%;
   }
 }
-
 @media screen and (max-width: 420px) {
   .navbar {
     display: none;
   }
+
   .bigContainer {
     width: 100%;
   }
@@ -338,12 +311,13 @@
     margin-left: 50%;
     font-size: 12px;
   }
+
   .footer p {
     font-size: 12px;
   }
 }
-
 body {
   overflow-x: hidden;
 }
+
 /*# sourceMappingURL=style.css.map */

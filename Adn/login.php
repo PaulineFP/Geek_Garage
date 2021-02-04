@@ -1,5 +1,7 @@
 <?php
 session_start();
+require ('inc/db.php');
+
 if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) {
     require ('inc/db.php');
     $req = $pdo->prepare("SELECT * FROM users WHERE username = :username  AND confirmed_at IS NOT NULL");
@@ -9,7 +11,7 @@ if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) 
         session_start();
         $_SESSION['auth'] = $user;
         $_SESSION['flash']['success'] = 'Vous êtes maintenant bien connecter !';
-        header('Location: account.php');
+        header('Location: index.php');
     } else {
         $_SESSION['flash']['danger'] = 'Vos identifiants sont incorrect !';
     }
