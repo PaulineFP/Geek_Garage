@@ -13,9 +13,9 @@ if(session_status() == PHP_SESSION_NONE){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Conection</title>
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="../css/signin.css" >
-    <link rel="stylesheet" href="../css/Bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../CSS/signin.css">
+    <link rel="stylesheet" href="../CSS/Bootstrap.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ if(session_status() == PHP_SESSION_NONE){
 
             </div>
 </header>
-<body>
+<body >
 <div class="container">
 
 <!--message d'erreur-->

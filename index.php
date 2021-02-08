@@ -10,6 +10,8 @@ $villes = $sql->fetchAll();
 
 $villes_json = json_encode($villes);
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +21,7 @@ $villes_json = json_encode($villes);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geek_Garage</title>
-    <link rel="stylesheet" href="css/Bootstrap.css">
+    <link rel="stylesheet" href="CSS/Bootstrap.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap" rel="stylesheet">
@@ -136,18 +138,24 @@ $villes_json = json_encode($villes);
 
         <div class="contact container-sm">
                 <div class="d-flex  justify-content-center cadre">
-                    <h2 id="contact">Contact</h2>
+                    <h2>Contact</h2>
 
                 </div>
 
-                <?php if (isset($msgDanger)) echo $msgDanger; else ""; ?>
-                <?php if (isset($msgSuccess)) echo $msgSuccess; else ""; ?>
+            <?php if (isset($_SESSION['flash'])): ?>
+                <?php foreach ($_SESSION['flash'] as $type => $message): ?>
+                    <div class="alert alert-<?= $type; ?>">
+                        <?= $message; ?>
+                    </div>
+                <?php endforeach; ?>
+                <?php unset($_SESSION['flash']); ?>
+            <?php endif; ?>
 
-                <div class="formContact d-flex justify-content-center">
+                <div id="contact" class="formContact d-flex justify-content-center">
 
                     <div class="form formC">
 
-                        <form name="Contact" action="contact.php" method="POST" onsubmit="return validateForm()">
+                        <form  name="Contact" action="contact.php" method="post" >
 
 
                             <div class="input-group">
@@ -176,7 +184,7 @@ $villes_json = json_encode($villes);
 
 </div>
 <footer class="footer ">
-    <p>&copy 2021 - Onlineformapro</p>
+    <img src='https://www.onlineformapro.com/wp-content/uploads/2020/01/logo-03.svg' width='8%' alt='Onlineformapro'>
 </footer>
 <!--------------------------------Fichier JS--------------------->
 <script type="text/javascript">
