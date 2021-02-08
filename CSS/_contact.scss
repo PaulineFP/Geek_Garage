@@ -3,9 +3,11 @@
   }
 
 .formContact {
-    background: no-repeat center/70% url("../Img/contact.png");
+    background: no-repeat center/80% url("../Img/contact.png");
     height: 1000px;
     padding-left: 10em;
+
+    .formC{margin-left: 2em}
 
     .form {
         padding-top: 8em;

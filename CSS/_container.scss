@@ -1,19 +1,17 @@
 .bigContainer {
     width: 80%;
-    h2 {  
+    h2 {
         width: 50%;
-        height: 300px;
-        font-family: retroking ;
+        height: 200px;
+        padding-top: 16px;
+        font-family: retroking;
         color: #581c0c;
         font-size: 50px;
         text-align: center;
-        background: no-repeat center/100% url(../Img/farme.jpg);
-        padding-top: 2em;
         margin: 1em;
     }
-    .farme {
-  
-    position: relative;
-    
+    .cadre {
+        background: no-repeat center/50% url(../Img/farme.jpg);
+        padding-top: 3rem;
     }
 }

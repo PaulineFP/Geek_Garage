@@ -26,6 +26,8 @@ $villes_json = json_encode($villes);
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
 
 </head>
 
@@ -51,8 +53,7 @@ $villes_json = json_encode($villes);
 
         <div class="about container-sm">
 
-            <div class="d-flex justify-content-center">
-
+            <div class="d-flex justify-content-center cadre">
                 <h2 id="about">Qui sommes nous</h2>
             </div>
 
@@ -91,7 +92,7 @@ $villes_json = json_encode($villes);
 
         <div class="services container-sm">
 
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center cadre">
 
                 <h2 id="services">Prestations</h2>
             </div>
@@ -119,7 +120,7 @@ $villes_json = json_encode($villes);
         </div>
 
         <div class="container-sm">
-            <div class="d-flex justify-content-center ">
+            <div class="d-flex justify-content-center cadre">
 
                 <h2 id="where">Où nous trouver</h2>
             </div>
@@ -129,10 +130,12 @@ $villes_json = json_encode($villes);
 
                 <div id="mymap"></div>
                 <img src="Img/border.png" class="map-reverse img-map">
-            </div>
 
-            <div class="contact container-sm">
-                <div class="d-flex  justify-content-center">
+            </div>
+        </div>
+
+        <div class="contact container-sm">
+                <div class="d-flex  justify-content-center cadre">
                     <h2 id="contact">Contact</h2>
 
                 </div>
@@ -142,7 +145,7 @@ $villes_json = json_encode($villes);
 
                 <div class="formContact d-flex justify-content-center">
 
-                    <div class="form mb-3">
+                    <div class="form formC">
 
                         <form name="Contact" action="contact.php" method="POST" onsubmit="return validateForm()">
 
@@ -159,7 +162,7 @@ $villes_json = json_encode($villes);
                                        aria-describedby="inputGroupPrepend" required><br>
                             </div>
                             <div>
-                                <textarea name="message" type="text" resize class="form-control" id="validationTextarea"
+                                <textarea name="message" type="text" resize class="form-control textmedia" id="validationTextarea"
                                           placeholder="Message:" minlength="6"></textarea>
                             </div>
                             <button type="submit" value="Envoyer" class="btn send">Envoyer</button>
@@ -221,12 +224,13 @@ $villes_json = json_encode($villes);
                 "<br>" +
                 "<a  href='#contact' style='margin-top: 5px; color: #ffffff' type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModal' onclick=\"document.getElementById('contact_center').value = '" + villes[ville].villes + "';\">Contacter </a>");
             marqueurs.addLayer(marqueur1);
+
+            //On ajoute le marqueur au tableau
+            tableauMarker.push(marqueurs);
         }
 
 
-        //On ajoute le marqueur au tableau
 
-        tableauMarker.push(marqueurs);
 
         //On regroupe les marqueurs dans un groupe lefleat
         var groupe = new L.featureGroup(tableauMarker);
@@ -241,7 +245,7 @@ $villes_json = json_encode($villes);
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
-</script>
+
 <!--    <script src="main.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"

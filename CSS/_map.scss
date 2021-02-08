@@ -1,6 +1,6 @@
 .map {
     .img-map {
-        width: 1000px;
+        width: 100%;
     }
     .map-reverse {
         transform: rotate(180deg);
@@ -22,8 +22,8 @@
 
 
 #mymap {
-    width: 600px;
-    height: 600px;
+    width: 60%;
+    height: 400px;
     margin-top: -15em;
     margin-right: 2em;
 }
